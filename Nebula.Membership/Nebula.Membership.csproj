@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Authors>Fatih Mert</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nebula.CoreLibrary\Nebula.CoreLibrary.csproj" />
+    <ProjectReference Include="..\Nebula.DataAccessLibrary\Nebula.DataAccessLibrary.csproj" />
+    <ProjectReference Include="..\Nebula.Security.Bearer.Helpers\Nebula.Security.Bearer.Helpers.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\Dapper.MsSql\" />
+    <Folder Include="Repositories\EntityFramework.MsSql\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+  </ItemGroup>
+</Project>
