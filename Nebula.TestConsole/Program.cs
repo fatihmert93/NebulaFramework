@@ -150,6 +150,11 @@ namespace Nebula.TestConsole
             seedManager.SeedType = SeedType.Dev;
             seedManager.ExecuteAll();
 
+            IRepository<SampleEntity> repository = DependencyService.GetService<IRepository<SampleEntity>>();
+            var list = repository.Query().ToList();
+
+            Console.WriteLine(list.Count);
+            
 //            IRepository<SampleEntity> sRepository = DependencyService.GetService<IRepository<SampleEntity>>();
 //            
 //            var sample = new SampleEntity();

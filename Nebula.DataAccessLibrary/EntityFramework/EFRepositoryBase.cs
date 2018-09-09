@@ -21,25 +21,20 @@ namespace Nebula.DataAccessLibrary.EntityFramework
 
         private Type _type;
         public bool AutoTableGenerate { get; set; } = false;
-        static object SpinLock = new object();
+        private static object _spinLock = new object();
         
 
         
         private DbContext _context;
 
-        
-
-        protected IDbContextFactory _dbContextFactory;
 
         protected DbContext Context => _context;
 
 
         protected EFRepositoryBase(IDbContextFactory dbContextFactory)
         {
-            _dbContextFactory = dbContextFactory;
             if (_context == null)
-                _context = _dbContextFactory.CreateInstance(typeof(NebulaNpgEntityContext));
-
+                _context = dbContextFactory.CreateInstance(typeof(TContext));
             _type = typeof(TEntity);
 
         }
