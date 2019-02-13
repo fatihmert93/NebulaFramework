@@ -139,21 +139,14 @@ namespace Nebula.TestConsole
         static void Main(string[] args)
         {
             ApplicationSettings.ConnectionString =
-                "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=12345";
+                "server=superdoctor.cnc1ajzvqewo.eu-central-1.rds.amazonaws.com;database=superdoctor;user id=spadmin;password=spr31415SD;";
             SspBootstrapper sspBootstrapper = new SspBootstrapper();
             sspBootstrapper.Start();
 
             ITableCreator tableCreator = DependencyService.GetService<ITableCreator>();
             tableCreator.CreateAllTable<EntityBase>();
 
-            ISeedManager seedManager = DependencyService.GetService<ISeedManager>();
-            seedManager.SeedType = SeedType.Dev;
-            seedManager.ExecuteAll();
 
-            IRepository<SampleEntity> repository = DependencyService.GetService<IRepository<SampleEntity>>();
-            var list = repository.Query().ToList();
-
-            Console.WriteLine(list.Count);
             
 //            IRepository<SampleEntity> sRepository = DependencyService.GetService<IRepository<SampleEntity>>();
 //            

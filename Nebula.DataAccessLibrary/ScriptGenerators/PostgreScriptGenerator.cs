@@ -55,8 +55,8 @@ namespace Nebula.DataAccessLibrary.ScriptGenerators
             dataMapper.Add(typeof(string), new DbColumnType("text", true));
             dataMapper.Add(typeof(bool), new DbColumnType("boolean", false));
             dataMapper.Add(typeof(bool?), new DbColumnType("boolean", true));
-            dataMapper.Add(typeof(DateTime), new DbColumnType("timestamp", false));
-            dataMapper.Add(typeof(DateTime?), new DbColumnType("timestamp", true));
+            dataMapper.Add(typeof(DateTime), new DbColumnType("timestamp without time zone", false));
+            dataMapper.Add(typeof(DateTime?), new DbColumnType("timestamp without time zone", true));
             dataMapper.Add(typeof(float), new DbColumnType("real", false));
             dataMapper.Add(typeof(float?), new DbColumnType("real", true));
             dataMapper.Add(typeof(decimal), new DbColumnType("numeric", false));
