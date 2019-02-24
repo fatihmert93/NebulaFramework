@@ -123,9 +123,6 @@ namespace Nebula.DataAccessLibrary.TableCreaters
             }
 
             _connection.Execute(removeBuilder.ToString() + addBuilder);
-            
-            
-            
 
         }
 

@@ -31,8 +31,8 @@ namespace Nebula.DataAccessLibrary.ScriptGenerators
             dataMapper.Add(typeof(string), "text");
             dataMapper.Add(typeof(bool), "boolean not null");
             dataMapper.Add(typeof(bool?),"boolean null");
-            dataMapper.Add(typeof(DateTime), "date not null");
-            dataMapper.Add(typeof(DateTime?),"date null");
+            dataMapper.Add(typeof(DateTime), "timestamp not null");
+            dataMapper.Add(typeof(DateTime?),"timestamp null");
             dataMapper.Add(typeof(float), "real not null");
             dataMapper.Add(typeof(float?),"real null");
             dataMapper.Add(typeof(decimal), "numeric not null");
@@ -55,8 +55,8 @@ namespace Nebula.DataAccessLibrary.ScriptGenerators
             dataMapper.Add(typeof(string), new DbColumnType("text", true));
             dataMapper.Add(typeof(bool), new DbColumnType("boolean", false));
             dataMapper.Add(typeof(bool?), new DbColumnType("boolean", true));
-            dataMapper.Add(typeof(DateTime), new DbColumnType("date", false));
-            dataMapper.Add(typeof(DateTime?), new DbColumnType("date", true));
+            dataMapper.Add(typeof(DateTime), new DbColumnType("timestamp without time zone", false));
+            dataMapper.Add(typeof(DateTime?), new DbColumnType("timestamp without time zone", true));
             dataMapper.Add(typeof(float), new DbColumnType("real", false));
             dataMapper.Add(typeof(float?), new DbColumnType("real", true));
             dataMapper.Add(typeof(decimal), new DbColumnType("numeric", false));
@@ -81,8 +81,8 @@ namespace Nebula.DataAccessLibrary.ScriptGenerators
             dataMapper.Add(typeof(string), "text");
             dataMapper.Add(typeof(bool), "boolean not null");
             dataMapper.Add(typeof(bool?),"boolean null");
-            dataMapper.Add(typeof(DateTime), "date not null");
-            dataMapper.Add(typeof(DateTime?),"date null");
+            dataMapper.Add(typeof(DateTime), "timestamp not null");
+            dataMapper.Add(typeof(DateTime?),"timestamp null");
             dataMapper.Add(typeof(float), "real not null");
             dataMapper.Add(typeof(float?),"real null");
             dataMapper.Add(typeof(decimal), "numeric not null");

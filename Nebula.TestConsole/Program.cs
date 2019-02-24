@@ -148,19 +148,19 @@ namespace Nebula.TestConsole
 
 
             
-//            IRepository<SampleEntity> sRepository = DependencyService.GetService<IRepository<SampleEntity>>();
-//            
-//            var sample = new SampleEntity();
-//            sample.Emrah = "emrah1";
-//            sample.IsDeleted = true;
-//            sRepository.Create(sample);
-//            
-//            var samle = new SampleEntity();
-//            samle.Emrah = "emrah2";
-//            samle.IsDeleted = false;
-//            sRepository.Create(samle);
-//
-//            var list = sRepository.Query().ToList();
+            IRepository<SampleEntity> sRepository = DependencyService.GetService<IRepository<SampleEntity>>();
+            
+            var sample = new SampleEntity();
+            sample.Emrah = "emrah1";
+            sample.IsDeleted = true;
+            sRepository.Create(sample);
+            
+            var samle = new SampleEntity();
+            samle.Emrah = "emrah2";
+            samle.IsDeleted = false;
+            sRepository.Create(samle);
+
+            var list = sRepository.Query().ToList();
 
             //dynamic repository = DependencyService.GetService(typeof(IRepository));
 
