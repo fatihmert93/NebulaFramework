@@ -15,7 +15,7 @@
     <Folder Include="Repositories\EntityFramework.MsSql\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
   </ItemGroup>
 </Project>
